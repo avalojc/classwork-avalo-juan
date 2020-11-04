@@ -26,4 +26,6 @@ public interface BattleshipDao {
 
     void attack(BattleshipGuess attack);
 
+    void editGame(BattleshipGame currentGame);
+
 }

@@ -1,6 +1,6 @@
 package com.talentpath.battleship.models;
 
-import java.util.ArrayList;
+import java.util.List;
 import java.util.stream.Collectors;
 
 public class BattleshipGame {
@@ -8,19 +8,18 @@ public class BattleshipGame {
     private BattleshipBoard battleshipBoardPlayer0;
     private BattleshipBoard battleshipBoardPlayer1;
     private Integer totalGuesses; //not needed technically but could be great for testing
-    private ArrayList<Integer []> guessedPosition ;
+    private List<BattleshipGuess> guessedPositions;
 
     public BattleshipGame() {
 
     }
 
-    public BattleshipGame(Integer gameId, BattleshipBoard battleshipBoardPlayer0, BattleshipBoard battleshipBoardPlayer1, Integer totalGuesses, ArrayList<Integer []> guessedPosition) {
-        this.gameId = gameId;
-        this.battleshipBoardPlayer0 = battleshipBoardPlayer0;
-        this.battleshipBoardPlayer1 = battleshipBoardPlayer1;
-        this.totalGuesses = totalGuesses;
-        this.guessedPosition = guessedPosition;
-//                .stream().collect(Collectors.toList());
+    public BattleshipGame(BattleshipGame that) {
+        this.gameId = that.gameId;
+        this.battleshipBoardPlayer0 = that.battleshipBoardPlayer0;
+        this.battleshipBoardPlayer1 = that.battleshipBoardPlayer1;
+        this.totalGuesses = that.totalGuesses;
+        this.guessedPositions = that.guessedPositions.stream().collect(Collectors.toList());
     }
 
     public Integer getGameId() {
@@ -55,11 +54,11 @@ public class BattleshipGame {
         this.totalGuesses = totalGuesses;
     }
 
-    public ArrayList<Integer []> getGuessedPosition() {
-        return guessedPosition;
+    public List<BattleshipGuess> getGuessedPosition() {
+        return guessedPositions;
     }
 
-    public void setGuessedPosition(ArrayList<Integer []> guessedPosition) {
-        this.guessedPosition = guessedPosition;
+    public void setGuessedPosition(List<BattleshipGuess> guessedPosition) {
+        this.guessedPositions = guessedPosition;
     }
 }

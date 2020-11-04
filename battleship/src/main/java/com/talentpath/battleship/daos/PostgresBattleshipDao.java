@@ -9,22 +9,22 @@ import java.util.List;
 public class PostgresBattleshipDao implements BattleshipDao {
     @Override
     public List<BattleshipGame> getAllGames() {
-        return null;
+        throw new UnsupportedOperationException();
     }
 
     @Override
     public List<BattleshipBoard> getAllBoards() {
-        return null;
+        throw new UnsupportedOperationException();
     }
 
     @Override
     public BattleshipGame addGame(BattleshipGame toAdd) {
-        return null;
+        throw new UnsupportedOperationException();
     }
 
     @Override
     public BattleshipGame getGameById(Integer gameId) {
-        return null;
+        throw new UnsupportedOperationException();
     }
 
     @Override
@@ -34,21 +34,28 @@ public class PostgresBattleshipDao implements BattleshipDao {
 
     @Override
     public BattleshipBoard addBoard(BattleshipBoard toAdd) {
-        return null;
+        throw new UnsupportedOperationException();
     }
 
     @Override
     public List<BattleshipBoard> getBoardById(Integer boardId) {
-        return null;
+        throw new UnsupportedOperationException();
     }
 
     @Override
     public void addShip(BattleshipGame gameId, BattleshipBoard boardId) {
-
+        throw new UnsupportedOperationException();
     }
 
     @Override
     public void attack(BattleshipGuess attack) {
-
+        throw new UnsupportedOperationException();
     }
+
+    @Override
+    public void editGame(BattleshipGame currentGame) {
+        throw new UnsupportedOperationException();
+    }
+
+
 }

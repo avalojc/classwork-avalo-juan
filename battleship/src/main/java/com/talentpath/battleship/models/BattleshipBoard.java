@@ -1,13 +1,13 @@
 package com.talentpath.battleship.models;
 
-import java.util.ArrayList;
+import java.util.List;
 
 public class BattleshipBoard {
     private Integer gameId;
     private Integer boardId;
     private String[][] ocean;
-    private ArrayList<Integer []> shipPositions;
-    private ArrayList<Integer []> guessedPositions;
+    private List<Integer []> shipPositions;
+    private List<BattleshipGuess> guessedPositions;
 
     public Integer getGameId() {
         return gameId;
@@ -33,19 +33,19 @@ public class BattleshipBoard {
         this.ocean = ocean;
     }
 
-    public ArrayList<Integer[]> getShipPositions() {
+    public List<Integer[]> getShipPositions() {
         return shipPositions;
     }
 
-    public void setShipPositions(ArrayList<Integer[]> shipPositions) {
+    public void setShipPositions(List<Integer[]> shipPositions) {
         this.shipPositions = shipPositions;
     }
 
-    public ArrayList<Integer[]> getGuessedPositions() {
+    public List<BattleshipGuess> getGuessedPositions() {
         return guessedPositions;
     }
 
-    public void setGuessedPositions(ArrayList<Integer[]> guessedPositions) {
+    public void setGuessedPositions(List<BattleshipGuess> guessedPositions) {
         this.guessedPositions = guessedPositions;
     }
 }
